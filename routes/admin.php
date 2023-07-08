@@ -9,7 +9,10 @@ Route::get('/test', function () {
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/login', [AdminController::class, 'login'])->name('admin-login');
+    Route::post('/login', [AdminController::class, 'loginPost'])->name('admin-login-post');
+
     Route::group(['middleware' => 'auth:admin'], function () {
+        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
 
     });
 });
