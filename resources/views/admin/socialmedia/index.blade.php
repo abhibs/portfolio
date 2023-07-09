@@ -9,7 +9,7 @@
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Social Media</li>
+                        <li class="breadcrumb-item active" aria-current="page">Social Media Update</li>
                     </ol>
                 </nav>
             </div>
@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="{{ route('social-media-store') }}">
+                                <form method="post" action="">
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
@@ -35,7 +35,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="facebook"
                                                 class="form-control @error('facebook') is-invalid @enderror" id=""
-                                                placeholder="Enter Facebook Url" />
+                                                placeholder="Enter Facebook Url" value="{{ $data->facebook }}"/>
 
                                             @error('facebook')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -50,7 +50,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="twitter"
                                                 class="form-control @error('twitter') is-invalid @enderror" id=""
-                                                placeholder="Enter Twitter Url" />
+                                                placeholder="Enter Twitter Url" value="{{ $data->twitter }}"/>
 
                                             @error('twitter')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -65,15 +65,13 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="instagram"
                                                 class="form-control @error('instagram') is-invalid @enderror" id=""
-                                                placeholder="Enter Instagram Url" />
+                                                placeholder="Enter Instagram Url" value="{{ $data->instagram }}" />
 
                                             @error('instagram')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
-
-
 
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
@@ -82,7 +80,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="linkedin"
                                                 class="form-control @error('linkedin') is-invalid @enderror" id=""
-                                                placeholder="Enter LinkedIn Url" />
+                                                placeholder="Enter LinkedIn Url" value="{{ $data->linkedin }}"/>
 
                                             @error('linkedin')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -97,7 +95,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="youtube"
                                                 class="form-control @error('youtube') is-invalid @enderror" id=""
-                                                placeholder="Enter YouTube Url" />
+                                                placeholder="Enter YouTube Url" value="{{ $data->youtube }}"/>
 
                                             @error('youtube')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -112,7 +110,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="github"
                                                 class="form-control @error('github') is-invalid @enderror" id=""
-                                                placeholder="Enter GitHub Url" />
+                                                placeholder="Enter GitHub Url" value="{{ $data->github }}"/>
 
                                             @error('github')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -123,7 +121,7 @@
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="submit" class="btn btn-primary px-4" value="Add Social Media" />
+                                            <input type="submit" class="btn btn-primary px-4" value="Update Social Media" />
                                         </div>
                                     </div>
                             </div>

@@ -27,7 +27,7 @@
             <a href="">
                 <div class="parent-icon"><i class='lni lni-chrome'></i>
                 </div>
-                <div class="menu-title">Social Media Edit</div>
+                <div class="menu-title">Social Media Update</div>
             </a>
         </li>
         @else
