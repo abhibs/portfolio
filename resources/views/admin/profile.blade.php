@@ -32,6 +32,7 @@
                                     <div class="mt-3">
                                         <h4>{{ $admin->name }}</h4>
                                         <p class="text-secondary mb-1">{{ $admin->email }}</p>
+                                        <p class="text-secondary mb-1">{{ $admin->phone }}</p>
                                         <p class="text-muted font-size-sm">{{ $admin->address }}</p>
 
                                     </div>
