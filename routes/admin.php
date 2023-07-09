@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\SocialMediaController;
+
 
 Route::get('/test', function () {
     echo "Abhiram";
@@ -19,6 +21,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/change/password', [Admincontroller::class, 'changePassword'])->name('admin-change-password');
         Route::post('/update/password', [AdminController::class, 'updatePassword'])->name('admin-password-update');
 
+
+        Route::get('/social/media/create', [SocialMediaController::class, 'create'])->name('social-media-create');
 
     });
 });

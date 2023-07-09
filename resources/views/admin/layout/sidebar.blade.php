@@ -19,6 +19,26 @@
             </a>
         </li>
 
+        @php
+            $data = App\Models\SocialMedia::first();
+        @endphp
+        @if(isset($data))
+        <li>
+            <a href="">
+                <div class="parent-icon"><i class='lni lni-chrome'></i>
+                </div>
+                <div class="menu-title">Social Media Edit</div>
+            </a>
+        </li>
+        @else
+        <li>
+            <a href="{{ route('social-media-create') }}">
+                <div class="parent-icon"><i class='lni lni-chrome'></i>
+                </div>
+                <div class="menu-title">Social Media Create</div>
+            </a>
+        </li>
+        @endif
     </ul>
     <!--end navigation-->
 </div>
