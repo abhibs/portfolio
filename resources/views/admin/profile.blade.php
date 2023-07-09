@@ -44,7 +44,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action=""
+                                <form method="post" action="{{ route('admin-profile-update') }}"
                                     enctype="multipart/form-data">
                                     @csrf
 
@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <img id="showImage"
-                                                src="{{ !empty($admin->image) ? url('storage/admin/' . $admin->photo) : url('no_image.jpg') }}"
+                                                src="{{ !empty($admin->image) ? url('storage/admin/' . $admin->image) : url('no_image.jpg') }}"
                                                 alt="Admin" style="width:100px; height: 100px;">
                                         </div>
                                     </div>

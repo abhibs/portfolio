@@ -47,11 +47,11 @@
                 class='bx bxs-up-arrow-alt'></i></a>
         <!--End Back To Top Button-->
         @include('admin.layout.footer')
-        
+
     </div>
     <!--end wrapper-->
     <!--start switcher-->
-    <div class="switcher-wrapper">
+    {{-- <div class="switcher-wrapper">
         <div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
         </div>
         <div class="switcher-body">
@@ -84,7 +84,7 @@
 
 
         </div>
-    </div>
+    </div> --}}
     <!--end switcher-->
     <!-- Bootstrap JS -->
     <script src="{{ asset('admin/assets/js/bootstrap.bundle.min.js') }}"></script>
