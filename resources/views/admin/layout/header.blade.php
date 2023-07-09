@@ -1,3 +1,6 @@
+@php
+    $admin = App\Models\Admin::first();
+@endphp
 <header>
     <div class="topbar d-flex align-items-center">
         <nav class="navbar navbar-expand">
@@ -299,11 +302,11 @@
             <div class="user-box dropdown">
                 <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="{{ asset('admin/assets/images/avatars/avatar-2.png') }}" class="user-img"
+                    <img src="{{ !empty($admin->image) ? url('storage/admin/' . $admin->image) : url('no_image.jpg') }}" class="user-img"
                         alt="user avatar">
                     <div class="user-info ps-3">
-                        <p class="user-name mb-0">Pauline Seitz</p>
-                        <p class="designattion mb-0">Web Designer</p>
+                        <p class="user-name mb-0">{{ $admin->name }}</p>
+                        <p class="designattion mb-0">{{ $admin->email }}</p>
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
