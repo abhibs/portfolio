@@ -81,7 +81,8 @@
                                             <h6 class="mb-0">Address</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" name="address" class="form-control" value="{{ $admin->address }}" />
+                                            <input type="text" name="address" class="form-control"
+                                                value="{{ $admin->address }}" />
                                         </div>
                                     </div>
 
@@ -138,4 +139,15 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
 @endsection
