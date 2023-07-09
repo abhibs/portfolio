@@ -18,12 +18,12 @@
         <div class="row">
             <div class="col d-flex justify-content-between align-items-baseline">
                 <div class="top-icons">
-                    <a href="#" class="mx-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-github"></i></a>
+                    <a href="{{ $socialmedia->facebook }}" target="_blank" class="mx-2"><i class="fab fa-facebook"></i></a>
+                    <a href="{{ $socialmedia->twitter }}" target="_blank" class="mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ $socialmedia->instagram }}" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ $socialmedia->linkedin }}" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{ $socialmedia->youtube }}" target="_blank" class="mx-2"><i class="fab fa-youtube"></i></a>
+                    <a href="{{ $socialmedia->github }}" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
                 </div>
                 <h5 class="text-capitalize">all rights reserved</h5>
             </div>
