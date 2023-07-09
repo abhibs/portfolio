@@ -56,5 +56,44 @@ class SocialMediaController extends Controller
         return view('admin.socialmedia.index', compact('data'));
     }
 
+    public function update(Request $request)
+    {
+        $request->validate([
+            'facebook' => 'required',
+            'twitter' => 'required',
+            'instagram' => 'required',
+            'linkedin' => 'required',
+            'youtube' => 'required',
+            'github' => 'required',
+
+
+        ], [
+            'facebook.required' => 'Facebook URL is Required',
+            'twitter.required' => 'Twitter URL is Required',
+            'instagram.required' => 'Instagram URL is Required',
+            'linkedin.required' => 'LinkedIn URL is Required',
+            'youtube.required' => 'YouTube URL is Required',
+            'github.required' => 'GitHub URL is Required',
+        ]);
+        $id = $request->id;
+
+        SocialMedia::findOrFail($id)->update([
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'instagram' => $request->instagram,
+            'linkedin' => $request->linkedin,
+            'youtube' => $request->youtube,
+            'github' => $request->github,
+        ]);
+
+        $notification = array(
+            'message' => 'Social Media Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('social-media')->with($notification);
+
+    }
+
 
 }

@@ -26,8 +26,10 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="">
+                                <form method="post" action="{{ route('social-media-update') }}">
                                     @csrf
+                                    <input type="hidden" name="id" value="{{ $data->id }}">
+
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Facebook</h6>
@@ -35,7 +37,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="facebook"
                                                 class="form-control @error('facebook') is-invalid @enderror" id=""
-                                                placeholder="Enter Facebook Url" value="{{ $data->facebook }}"/>
+                                                placeholder="Enter Facebook Url" value="{{ $data->facebook }}" />
 
                                             @error('facebook')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -50,7 +52,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="twitter"
                                                 class="form-control @error('twitter') is-invalid @enderror" id=""
-                                                placeholder="Enter Twitter Url" value="{{ $data->twitter }}"/>
+                                                placeholder="Enter Twitter Url" value="{{ $data->twitter }}" />
 
                                             @error('twitter')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -80,7 +82,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="linkedin"
                                                 class="form-control @error('linkedin') is-invalid @enderror" id=""
-                                                placeholder="Enter LinkedIn Url" value="{{ $data->linkedin }}"/>
+                                                placeholder="Enter LinkedIn Url" value="{{ $data->linkedin }}" />
 
                                             @error('linkedin')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -95,7 +97,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="youtube"
                                                 class="form-control @error('youtube') is-invalid @enderror" id=""
-                                                placeholder="Enter YouTube Url" value="{{ $data->youtube }}"/>
+                                                placeholder="Enter YouTube Url" value="{{ $data->youtube }}" />
 
                                             @error('youtube')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -110,7 +112,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="github"
                                                 class="form-control @error('github') is-invalid @enderror" id=""
-                                                placeholder="Enter GitHub Url" value="{{ $data->github }}"/>
+                                                placeholder="Enter GitHub Url" value="{{ $data->github }}" />
 
                                             @error('github')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -121,7 +123,8 @@
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="submit" class="btn btn-primary px-4" value="Update Social Media" />
+                                            <input type="submit" class="btn btn-primary px-4"
+                                                value="Update Social Media" />
                                         </div>
                                     </div>
                             </div>

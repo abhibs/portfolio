@@ -25,6 +25,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/social/media/create', [SocialMediaController::class, 'create'])->name('social-media-create');
         Route::post('/social/media/store', [SocialMediaController::class, 'store'])->name('social-media-store');
         Route::get('/social/media', [SocialMediaController::class, 'index'])->name('social-media');
+        Route::post('/social/media/update', [SocialMediaController::class, 'update'])->name('social-media-update');
+
 
     });
 });
