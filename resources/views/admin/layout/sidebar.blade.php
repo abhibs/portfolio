@@ -24,7 +24,7 @@
         @endphp
         @if(isset($data))
         <li>
-            <a href="">
+            <a href="{{ route('social-media') }}">
                 <div class="parent-icon"><i class='lni lni-chrome'></i>
                 </div>
                 <div class="menu-title">Social Media Update</div>
