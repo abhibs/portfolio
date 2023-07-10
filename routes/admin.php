@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/name/content/create', [NameContentController::class, 'create'])->name('name-content-create');
         Route::post('/name/content/store', [NameContentController::class, 'store'])->name('name-content-store');
         Route::get('/name/content', [NameContentController::class, 'index'])->name('name-content');
+        Route::post('/name/content/update', [NameContentController::class, 'update'])->name('name-content-update');
 
 
     });

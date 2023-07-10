@@ -26,8 +26,10 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="">
+                                <form method="post" action="{{ route('name-content-update') }}">
                                     @csrf
+                                    <input type="hidden" name="id" value="{{ $data->id }}">
+
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Name</h6>
