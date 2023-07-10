@@ -30,6 +30,52 @@
         </div>
     </div>
 
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <a class="navbar-brand px-2 py-0 " href="#">Coder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize nav-active" href="#header">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize" href="#about">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize" href="#projects">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize" href="#posts">posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize" href="#reviews">reviews</a>
+                    </li>
+                </ul>
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Here.....">
+                        <div class="input-group-append">
+                            <button class="btn search-btn" type="button"><i class="fas fa-search"></i></button>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </nav>
+    </header>
+
 
 
 
