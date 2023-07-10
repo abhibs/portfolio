@@ -25,14 +25,14 @@
                     <a href="{{ $socialmedia->youtube }}" target="_blank" class="mx-2"><i class="fab fa-youtube"></i></a>
                     <a href="{{ $socialmedia->github }}" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
                 </div>
-                <h5 class="text-capitalize">all rights reserved</h5>
+                <h5 class="text-capitalize">{{ $namecontent->content }}</h5>
             </div>
         </div>
     </div>
 
     <header id="header">
         <nav id="navbar" class="navbar navbar-expand-lg">
-            <a class="navbar-brand px-2 py-0 " href="#">Coder</a>
+            <a class="navbar-brand px-2 py-0 " href="#">{{ $namecontent->name }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
