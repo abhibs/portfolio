@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SocialMediaController;
+use App\Http\Controllers\Admin\NameContentController;
+
 
 
 Route::get('/test', function () {
@@ -26,6 +28,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/social/media/store', [SocialMediaController::class, 'store'])->name('social-media-store');
         Route::get('/social/media', [SocialMediaController::class, 'index'])->name('social-media');
         Route::post('/social/media/update', [SocialMediaController::class, 'update'])->name('social-media-update');
+
+        Route::get('/name/content/create', [NameContentController::class, 'create'])->name('name-content-create');
 
 
     });
