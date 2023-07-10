@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SocialMediaController;
+use App\Http\Controllers\Api\NameContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/testing', function () {
 });
 
 Route::get('social/media', [SocialMediaController::class, 'socialMedia']);
+Route::get('name/content', [NameContentController::class, 'nameContent']);
 
 
 
