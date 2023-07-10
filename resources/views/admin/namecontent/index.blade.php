@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="{{ route('name-content-store') }}">
+                                <form method="post" action="">
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
@@ -35,7 +35,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="name"
                                                 class="form-control @error('name') is-invalid @enderror" id=""
-                                                placeholder="Enter Name" />
+                                                placeholder="Enter Name" value="{{ $data->name }}"/>
 
                                             @error('name')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -50,7 +50,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" name="content"
                                                 class="form-control @error('content') is-invalid @enderror" id=""
-                                                placeholder="Enter Content Whatever You Want On The Top Right" />
+                                                placeholder="Enter Content Whatever You Want On The Top Right" value="{{ $data->content }}"/>
 
                                             @error('conent')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -63,7 +63,7 @@
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="submit" class="btn btn-primary px-4" value="Add Top Navbar Name and Content" />
+                                            <input type="submit" class="btn btn-primary px-4" value="Update Top Navbar Name and Content" />
                                         </div>
                                     </div>
                             </div>
