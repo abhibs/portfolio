@@ -27,6 +27,11 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
+    <!-- DataTable -->
+    <link href="{{ asset('admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+    <!-- DataTable-->
+
+
     <!-- toastr Css End-->
     <title>Admin Dashboard</title>
 </head>
@@ -114,6 +119,17 @@
     <!--app JS-->
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
 
+    {{-- data tables start --}}
+
+    <!-- Required datatable js -->
+    <script src="{{ asset('admin/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+
+    <!-- Datatable init js -->
+    <script src="{{ asset('admin/assets/js/pages/datatables.init.js') }}"></script>
+
+    {{-- data tables ends --}}
+
     <!-- toastr js start -->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -137,6 +153,16 @@
         @endif
     </script>
     <!-- toastr js end -->
+
+
+    <!--Datatable-->
+    <script src="{{ asset('admin/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+    <!--Datatable-->
 </body>
 
 </html>
