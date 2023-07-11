@@ -87,21 +87,21 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item item-1 active"
-                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(assets/img/banner-1.jpeg)center/cover fixed no-repeat;">
+                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(./user/assets/img/banner-1.jpeg)center/cover fixed no-repeat;">
                                 <div class="carousel-caption mb-5 text-right">
                                     <h1 class="display-3 text-capitalize mb-2 text-center">I am Developer</h1>
                                     <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
                                 </div>
                             </div>
                             <div class="carousel-item item-2"
-                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(assets/img/banner-2.jpeg)center/cover fixed no-repeat;">
+                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(./user/assets/img/banner-2.jpeg)center/cover fixed no-repeat;">
                                 <div class="carousel-caption mb-5 text-center">
                                     <h1 class="display-3 text-capitalize mb-2 text-center">I am Designer</h1>
                                     <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
                                 </div>
                             </div>
                             <div class="carousel-item item-3"
-                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(assets/img/banner-3.jpeg)center/cover fixed no-repeat;">
+                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(./user/assets/img/banner-3.jpeg)center/cover fixed no-repeat;">
                                 <div class="carousel-caption mb-5 text-left">
                                     <h1 class="display-3 text-capitalize mb-2 text-center">I am Artist</h1>
                                     <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
