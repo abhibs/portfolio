@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\NameContentController;
+use App\Http\Controllers\Admin\SliderController;
+
 
 
 
@@ -34,6 +36,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/name/content', [NameContentController::class, 'index'])->name('name-content');
         Route::post('/name/content/update', [NameContentController::class, 'update'])->name('name-content-update');
 
+
+        Route::get('/slider/create', [SliderController::class, 'create'])->name('slider-create');
+        Route::get('/slider', [SliderController::class, 'index'])->name('slider');
 
     });
 });

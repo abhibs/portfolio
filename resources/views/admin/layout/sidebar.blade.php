@@ -61,6 +61,20 @@
         </li>
         @endif
 
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='lni lni-line-double'></i>
+                </div>
+                <div class="menu-title">Slider</div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('slider') }}"><i class="bx bx-right-arrow-alt"></i>All Slider</a>
+                </li>
+                <li> <a href="{{ route('slider-create') }}"><i class="bx bx-right-arrow-alt"></i>Add Slider</a>
+                </li>
+            </ul>
+        </li>
+
 
 
 
