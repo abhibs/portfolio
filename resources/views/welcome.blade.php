@@ -18,12 +18,18 @@
         <div class="row">
             <div class="col d-flex justify-content-between align-items-baseline">
                 <div class="top-icons">
-                    <a href="{{ $socialmedia->facebook }}" target="_blank" class="mx-2"><i class="fab fa-facebook"></i></a>
-                    <a href="{{ $socialmedia->twitter }}" target="_blank" class="mx-2"><i class="fab fa-twitter"></i></a>
-                    <a href="{{ $socialmedia->instagram }}" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
-                    <a href="{{ $socialmedia->linkedin }}" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
-                    <a href="{{ $socialmedia->youtube }}" target="_blank" class="mx-2"><i class="fab fa-youtube"></i></a>
-                    <a href="{{ $socialmedia->github }}" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+                    <a href="{{ $socialmedia->facebook }}" target="_blank" class="mx-2"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="{{ $socialmedia->twitter }}" target="_blank" class="mx-2"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="{{ $socialmedia->instagram }}" target="_blank" class="mx-2"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="{{ $socialmedia->linkedin }}" target="_blank" class="mx-2"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="{{ $socialmedia->youtube }}" target="_blank" class="mx-2"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="{{ $socialmedia->github }}" target="_blank" class="mx-2"><i
+                            class="fab fa-github"></i></a>
                 </div>
                 <h5 class="text-capitalize">{{ $namecontent->content }}</h5>
             </div>
@@ -74,17 +80,65 @@
 
             </div>
         </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col no-padding">
+                    <div id="demo-slider" class="carousel slide" data-ride="carousel">
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item item-1 active"
+                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(assets/img/banner-1.jpeg)center/cover fixed no-repeat;">
+                                <div class="carousel-caption mb-5 text-right">
+                                    <h1 class="display-3 text-capitalize mb-2 text-center">I am Developer</h1>
+                                    <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item item-2"
+                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(assets/img/banner-2.jpeg)center/cover fixed no-repeat;">
+                                <div class="carousel-caption mb-5 text-center">
+                                    <h1 class="display-3 text-capitalize mb-2 text-center">I am Designer</h1>
+                                    <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item item-3"
+                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(assets/img/banner-3.jpeg)center/cover fixed no-repeat;">
+                                <div class="carousel-caption mb-5 text-left">
+                                    <h1 class="display-3 text-capitalize mb-2 text-center">I am Artist</h1>
+                                    <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#demo-slider" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo-slider" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-     <script src="{{ asset('user/assets/js/script.js') }}"></script>
-     <script src="{{ asset('user/assets/js/bootstrap.bundle.min.js') }}"></script>
-     <script src="{{ asset('user/assets/fontawesome/js/all.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('user/assets/js/script.js') }}"></script>
+    <script src="{{ asset('user/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('user/assets/fontawesome/js/all.min.js') }}"></script>
     <!--  isotope-->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </body>
