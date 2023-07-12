@@ -139,5 +139,25 @@ class SliderController extends Controller
 
      }
 
+     public function inactive($id)
+    {
+        Slider::findOrFail($id)->update(['status' => 0]);
+        // dd($data);
+        $notification = array(
+            'message' => 'Slider Image Inacative Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 
+    public function active($id)
+    {
+        Slider::findOrFail($id)->update(['status' => 1]);
+        // dd($data);
+        $notification = array(
+            'message' => 'Slider Image Acative Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }
