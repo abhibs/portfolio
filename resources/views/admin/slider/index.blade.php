@@ -53,8 +53,16 @@
                                     </td>
 
                                     <td>
-                                        <a href="{{ route('slider-edit',$item->id) }}" class="btn btn-info">Edit</a>
-                                        <a href="{{ route('slider-delete', $item->id) }}" class="btn btn-danger" id="delete">Delete</a>
+                                        <a href="{{ route('slider-edit', $item->id) }}" class="btn btn-info">Edit</a>
+                                        <a href="{{ route('slider-delete', $item->id) }}" class="btn btn-danger"
+                                            id="delete">Delete</a>
+                                        @if ($item->status == 1)
+                                            <a href="" class="btn btn-primary" title="Inactive"> <i
+                                                    class="fa-solid fa-thumbs-down"></i> </a>
+                                        @else
+                                            <a href="" class="btn btn-primary" title="Active"> <i
+                                                    class="fa-solid fa-thumbs-up"></i> </a>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
