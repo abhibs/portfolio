@@ -62,5 +62,11 @@ class SliderController extends Controller
         return view('admin.slider.index', compact('datas'));
     }
 
+    public function edit($id)
+    {
+        $data = Slider::findOrFail($id);
+        return view('admin.slider.edit', compact('data'));
+    }
+
 
 }

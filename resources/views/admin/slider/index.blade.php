@@ -53,7 +53,7 @@
                                     </td>
 
                                     <td>
-                                        <a href="" class="btn btn-info">Edit</a>
+                                        <a href="{{ route('slider-edit',$item->id) }}" class="btn btn-info">Edit</a>
                                         <a href="" class="btn btn-danger" id="delete">Delete</a>
                                     </td>
                                 </tr>
