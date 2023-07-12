@@ -68,5 +68,58 @@ class SliderController extends Controller
         return view('admin.slider.edit', compact('data'));
     }
 
+    public function update(Request $request)
+    {
+        // dd($request->all());
+        $request->validate([
+            'name' => 'required',
+            'url' => 'required',
+        ], [
+
+            'name.required' => 'Slider Name is Required',
+            'url.required' => 'Slider URL is Required',
+
+        ]);
+        $id = $request->id;
+        $old_img = $request->old_image;
+
+        if ($request->file('image')) {
+            unlink($old_img);
+            $image = $request->file('image');
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension(); // 3434343443.jpg
+
+            Image::make($image)->resize(1050, 700)->save('storage/slider/' . $name_gen);
+            $save_url = 'storage/slider/' . $name_gen;
+
+            Slider::findOrFail($id)->update([
+                'name' => $request->name,
+                'image' => $save_url,
+                'url' => $request->url,
+
+            ]);
+            $notification = array(
+                'message' => 'Slider Updated with Image Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('slider')->with($notification);
+
+        } else {
+
+            Slider::findOrFail($id)->update([
+                'name' => $request->name,
+                'url' => $request->url,
+            ]);
+            $notification = array(
+                'message' => 'Slider Updated without Image Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('slider')->with($notification);
+
+        }
+
+    }
+
 
 }

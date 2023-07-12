@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/slider/store', [SliderController::class, 'store'])->name('slider-store');
         Route::get('/slider', [SliderController::class, 'index'])->name('slider');
         Route::get('/slider/edit/{id}', [SliderController::class, 'edit'])->name('slider-edit');
+        Route::post('/slider/update', [SliderController::class, 'update'])->name('slider-update');
 
     });
 });
