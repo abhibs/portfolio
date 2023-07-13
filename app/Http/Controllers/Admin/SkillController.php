@@ -88,4 +88,28 @@ class SkillController extends Controller
         return redirect()->route('skill')->with($notification);
 
     }
+
+    public function inactive($id)
+    {
+        Skill::findOrFail($id)->update(['status' => 0]);
+        // dd($data);
+        $notification = array(
+            'message' => 'Skill Inacative Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+
+    public function active($id)
+    {
+        Skill::findOrFail($id)->update(['status' => 1]);
+        // dd($data);
+        $notification = array(
+            'message' => 'Skill Acative Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+
+
 }

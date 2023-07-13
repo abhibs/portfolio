@@ -55,10 +55,10 @@
                                         <a href="{{ route('skill-edit', $item->id) }}" class="btn btn-info">Edit</a>
                                         <a href="" class="btn btn-danger" id="delete">Delete</a>
                                         @if ($item->status == 1)
-                                            <a href="" class="btn btn-primary" title="Inactive"> <i
+                                            <a href="{{ route('skill-inactive', $item->id) }}" class="btn btn-primary" title="Inactive"> <i
                                                     class="fa-solid fa-thumbs-down"></i> </a>
                                         @else
-                                            <a href="" class="btn btn-primary" title="Active"> <i
+                                            <a href="{{ route('skill-active', $item->id) }}" class="btn btn-primary" title="Active"> <i
                                                     class="fa-solid fa-thumbs-up"></i> </a>
                                         @endif
                                     </td>
