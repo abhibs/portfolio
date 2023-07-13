@@ -53,4 +53,10 @@ class SkillController extends Controller
         $datas = Skill::latest()->get();
         return view('admin.skill.index', compact('datas'));
     }
+
+    public function edit($id)
+    {
+        $data = Skill::findOrFail($id);
+        return view('admin.skill.edit', compact('data'));
+    }
 }
