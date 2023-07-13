@@ -111,5 +111,18 @@ class SkillController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    public function delete($id)
+    {
+        Skill::findOrFail($id)->delete();
+
+         $notification = array(
+            'message' => 'Skill Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+     }
+
 
 }

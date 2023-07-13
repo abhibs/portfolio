@@ -56,6 +56,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/skill/update', [SkillController::class, 'update'])->name('skill-update');
         Route::get('/skill/inactive/{id}', [SkillController::class, 'inactive'])->name('skill-inactive');
         Route::get('/skill/active/{id}', [SkillController::class, 'active'])->name('skill-active');
+        Route::get('/skill/delete/{id}', [SkillController::class, 'delete'])->name('skill-delete');
 
     });
 });
