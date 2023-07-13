@@ -88,11 +88,12 @@
                         <div class="carousel-inner">
                             @foreach ($sliders as $key => $item)
                                 <div class="carousel-item {{ $key === 0 ? 'active' : '' }}"
-                                    style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url( {{  $item->image  }}) center/cover fixed no-repeat; min-height: 60vh;
+                                    style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url( {{ $item->image }}) center/cover fixed no-repeat; min-height: 60vh;
                                 clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);">
                                     <div class="carousel-caption mb-5 text-right">
                                         <h1 class="display-3 text-capitalize mb-2 text-center">{{ $item->name }}</h1>
-                                        <a href="{{ $item->url }}" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                                        <a href="{{ $item->url }}"
+                                            class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -116,6 +117,119 @@
             </div>
         </div>
     </header>
+
+    <!--skills section-->
+
+    <section id="skills" class="pb-5">
+        <div class="container">
+            <!--     title-->
+            <div class="row title mb-5">
+                <div class="col text-center">
+                    <h1 class="text-uppercase">my skills</h1>
+                    <h3 class="text-capitalize">Lorem ipsum dolor sit amet.</h3>
+                    <a href="#" class="mb-0"><i class="far fa-check-square"></i></a>
+                    <div class="title-underline"></div>
+
+                </div>
+
+            </div>
+            <!--      end of title-->
+            <div class="row">
+                <!--       item-->
+                <div class="col-lg-6 my-5">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center skills-icon">
+                            <span><i class="fab fa-html5"></i></span>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="text-uppercase">html</h3>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--        item-->
+                <!--       item-->
+                <div class="col-lg-6 my-5">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center skills-icon">
+                            <span><i class="fab fa-css3"></i></span>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="text-uppercase">css</h3>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--        item-->
+                <!--       item-->
+                <div class="col-lg-6 my-5">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center skills-icon">
+                            <span><i class="fab fa-js"></i></span>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="text-uppercase">javascript</h3>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--        item-->
+                <!--       item-->
+                <div class="col-lg-6 my-5">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center skills-icon">
+                            <span><i class="fab fa-node-js"></i></span>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="text-uppercase">node</h3>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--        item-->
+                <!--       item-->
+                <div class="col-lg-6 my-5">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center skills-icon">
+                            <span><i class="fab fa-angular"></i></span>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="text-uppercase">angular</h3>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--        item-->
+                <!--       item-->
+                <div class="col-lg-6 my-5">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center skills-icon">
+                            <span><i class="fab fa-react"></i></span>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="text-uppercase">react</h3>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--        item-->
+            </div>
+        </div>
+
+    </section>
+    <!--end of skills section-->
 
 
 

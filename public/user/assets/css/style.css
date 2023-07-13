@@ -114,21 +114,71 @@ body {
 }
 
 .no-padding {
-  padding: 0;
+    padding: 0;
 }
 
 .banner-btn {
-  color: #f1fffa;
-  border: 2px solid #f1fffa;
-  transition: all 1s;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: #f1fffa;
+    border: 2px solid #f1fffa;
+    transition: all 1s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .banner-btn:hover {
-  color: #2a9134;
-  background: #f1fffa;
-  border-color: #f1fffa;
-  transform: translateY(-7px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    color: #2a9134;
+    background: #f1fffa;
+    border-color: #f1fffa;
+    transform: translateY(-7px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
 
+}
+
+
+
+/*###########skills##################*/
+
+.title h1 {
+    color: #242424;
+}
+
+.title h3 {
+    color: #5a5a5a;
+}
+
+.title-underline {
+    height: 5px;
+    width: 250px;
+    background: #2a9134;
+    margin: -28px auto 0 auto;
+}
+
+.title a {
+    color: #2a9134;
+    font-size: 30px;
+    padding: 0px 10px;
+    display: inline-block;
+    background: #f1fffa;
+
+}
+
+.skills-icon {
+    background: #242424;
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+    transition: all 1s ease;
+
+}
+
+.skills-icon:hover {
+    background: #2a9134;
+}
+
+
+.skills-icon span {
+    font-size: 100px;
+    color: #909090;
+    transition: all 1s ease-in-out;
+}
+
+.skills-icon:hover span {
+    color: #f1fffa;
 }
