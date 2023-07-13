@@ -75,6 +75,20 @@
             </ul>
         </li>
 
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='lni lni-code-alt'></i>
+                </div>
+                <div class="menu-title">Skill</div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('skill') }}"><i class="bx bx-right-arrow-alt"></i>All Skill</a>
+                </li>
+                <li> <a href="{{ route('skill-create') }}"><i class="bx bx-right-arrow-alt"></i>Add Skill</a>
+                </li>
+            </ul>
+        </li>
+
 
 
 
