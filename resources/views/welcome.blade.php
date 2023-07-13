@@ -127,7 +127,7 @@
                 <div class="col text-center">
                     <h1 class="text-uppercase">my skills</h1>
                     <h3 class="text-capitalize">Lorem ipsum dolor sit amet.</h3>
-                    <a href="#" class="mb-0"><i class="far fa-check-square"></i></a>
+                    <a href="#" class="mb-0"><p>All Skill</p></a>
                     <div class="title-underline"></div>
 
                 </div>
@@ -135,96 +135,24 @@
             </div>
             <!--      end of title-->
             <div class="row">
-                <!--       item-->
-                <div class="col-lg-6 my-5">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center skills-icon">
-                            <span><i class="fab fa-html5"></i></span>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-uppercase">html</h3>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--        item-->
-                <!--       item-->
-                <div class="col-lg-6 my-5">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center skills-icon">
-                            <span><i class="fab fa-css3"></i></span>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-uppercase">css</h3>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
-                            </p>
+                <!--item-->
+                @foreach ($skills as $item)
+                    <div class="col-lg-6 my-5">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center skills-icon">
+                                <span><i class="{{ $item->icon }}"></i></span>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="text-uppercase">{{ $item->name }}</h3>
+                                <p class="text-muted">{{ $item->content }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!--        item-->
-                <!--       item-->
-                <div class="col-lg-6 my-5">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center skills-icon">
-                            <span><i class="fab fa-js"></i></span>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-uppercase">javascript</h3>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--        item-->
-                <!--       item-->
-                <div class="col-lg-6 my-5">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center skills-icon">
-                            <span><i class="fab fa-node-js"></i></span>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-uppercase">node</h3>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--        item-->
-                <!--       item-->
-                <div class="col-lg-6 my-5">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center skills-icon">
-                            <span><i class="fab fa-angular"></i></span>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-uppercase">angular</h3>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--        item-->
-                <!--       item-->
-                <div class="col-lg-6 my-5">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center skills-icon">
-                            <span><i class="fab fa-react"></i></span>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-uppercase">react</h3>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-                                architecto iusto est aliquid, corporis excepturi cupiditate iure hic accusantium fugiat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--        item-->
+                @endforeach
+
+
+                <!--item-->
             </div>
         </div>
 
