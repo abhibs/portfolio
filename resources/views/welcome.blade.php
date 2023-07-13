@@ -86,27 +86,18 @@
                     <div id="demo-slider" class="carousel slide" data-ride="carousel">
                         <!-- The slideshow -->
                         <div class="carousel-inner">
-                            <div class="carousel-item item-1 active"
-                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(./user/assets/img/banner-1.jpeg)center/cover fixed no-repeat;">
-                                <div class="carousel-caption mb-5 text-right">
-                                    <h1 class="display-3 text-capitalize mb-2 text-center">I am Developer</h1>
-                                    <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                            @foreach ($sliders as $key => $item)
+                                <div class="carousel-item {{ $key === 0 ? 'active' : '' }}"
+                                    style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url( {{  $item->image  }}) center/cover fixed no-repeat; min-height: 60vh;
+                                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);">
+                                    <div class="carousel-caption mb-5 text-right">
+                                        <h1 class="display-3 text-capitalize mb-2 text-center">{{ $item->name }}</h1>
+                                        <a href="{{ $item->url }}" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item item-2"
-                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(./user/assets/img/banner-2.jpeg)center/cover fixed no-repeat;">
-                                <div class="carousel-caption mb-5 text-center">
-                                    <h1 class="display-3 text-capitalize mb-2 text-center">I am Designer</h1>
-                                    <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item item-3"
-                                style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url(./user/assets/img/banner-3.jpeg)center/cover fixed no-repeat;">
-                                <div class="carousel-caption mb-5 text-left">
-                                    <h1 class="display-3 text-capitalize mb-2 text-center">I am Artist</h1>
-                                    <a href="#" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
-                                </div>
-                            </div>
+                            @endforeach
+
+
                         </div>
                         <a class="carousel-control-prev" href="#demo-slider" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>

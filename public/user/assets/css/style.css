@@ -113,19 +113,6 @@ body {
     background: #191919;
 }
 
-
-
-.item-1,
-.item-2,
-.item-3 {
-  min-height: 60vh;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
-
-}
-
-
-
-
 .no-padding {
   padding: 0;
 }
