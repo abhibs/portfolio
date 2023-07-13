@@ -183,3 +183,28 @@ body {
 .skills-icon:hover span {
     color: #f1fffa;
 }
+
+
+#about {
+    min-height: 40vh;
+    background: #909090;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+
+}
+
+
+
+
+#modal-filler a {
+    color: #242424;
+    font-size: 80px;
+    animation: myAnimation 3s ease infinite;
+}
+
+@keyframes myAnimation {
+    50% {
+        transform: scale(1.5);
+        color: #f1fffa;
+
+    }
+}

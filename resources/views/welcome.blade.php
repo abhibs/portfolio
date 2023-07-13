@@ -127,7 +127,9 @@
                 <div class="col text-center">
                     <h1 class="text-uppercase">my skills</h1>
                     <h3 class="text-capitalize">Lorem ipsum dolor sit amet.</h3>
-                    <a href="#" class="mb-0"><p>All Skill</p></a>
+                    <a href="#" class="mb-0">
+                        <p>All Skill</p>
+                    </a>
                     <div class="title-underline"></div>
 
                 </div>
@@ -159,6 +161,49 @@
     </section>
     <!--end of skills section-->
 
+    <section id="about" class="pb-5">
+        <!--video filler-->
+        <article id="modal-filler" class="d-flex align-items-center justify-content-center"
+            style="min-height: 50vh;
+        background: linear-gradient(rgba(42, 145, 52, 0.5), rgba(42, 145, 52, 0.5)), url(./user/assets/img/video-filler.jpeg)center/cover fixed no-repeat;
+    ">
+            <!-- modal -->
+            <a href="#"><i class="fas fa-play-circle" data-toggle="modal" data-target="#myModal"></i></a>
+        </article>
+        <!-- end of video fliller-->
+
+
+
+    </section>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-capitalize">video example</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QYZ2Pqo66Oc"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
