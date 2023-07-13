@@ -59,4 +59,33 @@ class SkillController extends Controller
         $data = Skill::findOrFail($id);
         return view('admin.skill.edit', compact('data'));
     }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'icon' => 'required',
+            'name' => 'required',
+            'content' => 'required',
+        ], [
+
+            'icon.required' => 'Skill Icon is Required',
+            'name.required' => 'Skill Name is Required',
+            'content.required' => 'Skill Content is Required',
+        ]);
+        $id = $request->id;
+
+        Skill::findOrFail($id)->update([
+            'icon' => $request->icon,
+            'name' => $request->name,
+            'content' => $request->content,
+        ]);
+
+        $notification = array(
+            'message' => 'Skill Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('skill')->with($notification);
+
+    }
 }

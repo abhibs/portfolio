@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="">
+                                <form method="post" action="{{ route('skill-update') }}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $data->id }}">
                                     <div class="row mb-3">
