@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\NameContentController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\SkillController;
+
 
 
 
@@ -45,6 +47,11 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/slider/delete/{id}', [SliderController::class, 'delete'])->name('slider-delete');
         Route::get('/slider/inactive/{id}', [SliderController::class, 'inactive'])->name('slider-inactive');
         Route::get('/slider/active/{id}', [SliderController::class, 'active'])->name('slider-active');
+
+
+        Route::get('/skill/create', [SkillController::class, 'create'])->name('skill-create');
+        Route::post('/skill/store', [SkillController::class, 'store'])->name('skill-store');
+        Route::get('/skill', [SkillController::class, 'index'])->name('skill');
 
     });
 });
