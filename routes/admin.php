@@ -8,10 +8,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\AboutVideoController;
 use App\Http\Controllers\Admin\ResumeController;
-
-
-
-
+use App\Http\Controllers\Admin\ProgramController;
 
 
 Route::get('/test', function () {
@@ -73,6 +70,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/resume', [ResumeController::class, 'index'])->name('resume');
         Route::post('/resume/update/{id}', [ResumeController::class, 'update'])->name('resume-update');
 
+        Route::get('/program/know/create', [ProgramController::class, 'create'])->name('program-know-create');
 
     });
 });
