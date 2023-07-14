@@ -22,43 +22,43 @@
         @php
             $data = App\Models\SocialMedia::first();
         @endphp
-        @if(isset($data))
-        <li>
-            <a href="{{ route('social-media') }}">
-                <div class="parent-icon"><i class='lni lni-chrome'></i>
-                </div>
-                <div class="menu-title">Social Media Update</div>
-            </a>
-        </li>
+        @if (isset($data))
+            <li>
+                <a href="{{ route('social-media') }}">
+                    <div class="parent-icon"><i class='lni lni-chrome'></i>
+                    </div>
+                    <div class="menu-title">Social Media Update</div>
+                </a>
+            </li>
         @else
-        <li>
-            <a href="{{ route('social-media-create') }}">
-                <div class="parent-icon"><i class='lni lni-chrome'></i>
-                </div>
-                <div class="menu-title">Social Media Create</div>
-            </a>
-        </li>
+            <li>
+                <a href="{{ route('social-media-create') }}">
+                    <div class="parent-icon"><i class='lni lni-chrome'></i>
+                    </div>
+                    <div class="menu-title">Social Media Create</div>
+                </a>
+            </li>
         @endif
 
         @php
             $data2 = App\Models\NameContent::first();
         @endphp
-        @if(isset($data2))
-        <li>
-            <a href="{{ route('name-content') }}">
-                <div class="parent-icon"><i class='bx bx-user-circle'></i>
-                </div>
-                <div class="menu-title">Name and Content Update</div>
-            </a>
-        </li>
+        @if (isset($data2))
+            <li>
+                <a href="{{ route('name-content') }}">
+                    <div class="parent-icon"><i class='bx bx-user-circle'></i>
+                    </div>
+                    <div class="menu-title">Name and Content Update</div>
+                </a>
+            </li>
         @else
-        <li>
-            <a href="{{ route('name-content-create') }}">
-                <div class="parent-icon"><i class='bx bx-user-circle'></i>
-                </div>
-                <div class="menu-title">Name and Content Create</div>
-            </a>
-        </li>
+            <li>
+                <a href="{{ route('name-content-create') }}">
+                    <div class="parent-icon"><i class='bx bx-user-circle'></i>
+                    </div>
+                    <div class="menu-title">Name and Content Create</div>
+                </a>
+            </li>
         @endif
 
         <li>
@@ -88,6 +88,33 @@
                 </li>
             </ul>
         </li>
+
+
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bx-user-circle'></i>
+                </div>
+                <div class="menu-title">About</div>
+            </a>
+            <ul>
+                @php
+                    $data3 = App\Models\AboutVideo::first();
+                @endphp
+                @if (isset($data3))
+                    <li>
+                        <a href="{{ route('about-video') }}"><i class="bx bx-right-arrow-alt"></i>About Video
+                            Update</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('about-video-create') }}"><i class="bx bx-right-arrow-alt"></i>About Video
+                            Create</a>
+                    </li>
+                @endif
+            </ul>
+        </li>
+
+
 
 
 

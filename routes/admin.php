@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\NameContentController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Admin\AboutVideoController;
+
 
 
 
@@ -57,6 +59,12 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/skill/inactive/{id}', [SkillController::class, 'inactive'])->name('skill-inactive');
         Route::get('/skill/active/{id}', [SkillController::class, 'active'])->name('skill-active');
         Route::get('/skill/delete/{id}', [SkillController::class, 'delete'])->name('skill-delete');
+
+
+        Route::get('/about/video/create', [AboutVideoController::class, 'create'])->name('about-video-create');
+        Route::post('/about/video/store', [AboutVideoController::class, 'store'])->name('about-video-store');
+        Route::get('/about/video', [AboutVideoController::class, 'index'])->name('about-video');
+        Route::post('/about/video/update', [AboutVideoController::class, 'update'])->name('about-video-update');
 
     });
 });
