@@ -127,6 +127,21 @@
                             Create</a>
                     </li>
                 @endif
+
+                @php
+                    $data5 = App\Models\Program::first();
+                @endphp
+                @if (isset($data5))
+                    <li>
+                        <a href="{{ route('program-know') }}"><i class="bx bx-right-arrow-alt"></i>Program Know
+                            Update</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('program-know-create') }}"><i class="bx bx-right-arrow-alt"></i>Program Know
+                            Create</a>
+                    </li>
+                @endif
             </ul>
         </li>
 
