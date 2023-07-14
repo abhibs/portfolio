@@ -172,7 +172,82 @@
         </article>
         <!-- end of video fliller-->
 
+        <div class="container">
+            <!--     title-->
+            <div class="row title my-5">
+                <div class="col text-center">
+                    <h1 class="text-uppercase">about me</h1>
 
+
+                </div>
+
+            </div>
+            <!--      end of title-->
+            <div class="row mb-5">
+                <div class="col-md-6 mb-5 d-flex flex-column justify-content-center"
+                    style="    min-height: 50vh;
+                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./user/assets/img/video-filler.jpeg)center/cover fixed no-repeat;
+                outline: 5px solid #2a9134;
+                outline-offset: 10px;">
+                    <div class="progress-bars">
+                        <!--           html-->
+
+                        <div class="bar my-3">
+                            <h5 class="text-light text-uppercase d-flex justify-content-between">html<span>70%</span>
+                            </h5>
+                            <div class="progress bg-light">
+
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
+                        <!--           end of html -->
+                        <!--           html-->
+
+                        <div class="bar my-3">
+                            <h5 class="text-light text-uppercase d-flex justify-content-between">css<span>80%</span>
+                            </h5>
+                            <div class="progress bg-light">
+
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                        </div>
+                        <!--           end of html -->
+                        <!--           html-->
+
+                        <div class="bar my-3">
+                            <h5 class="text-light text-uppercase d-flex justify-content-between">
+                                javascript<span>90%</span></h5>
+                            <div class="progress bg-light">
+
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
+                        <!--           end of html -->
+                        <!--           html-->
+
+                        <div class="bar my-3">
+                            <h5 class="text-light text-uppercase d-flex justify-content-between">
+                                angular<span>100%</span></h5>
+                            <div class="progress bg-light">
+
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100">100%</div>
+                            </div>
+                        </div>
+                        <!--           end of html -->
+
+
+                    </div>
+                </div>
+                <div class="col-md-6 py-5 about-text text-center">
+                    <h2 class="text-uppercase">my resume</h2>
+                    <a href="#" class="btn btn-lg d-block w-75 mx-auto text-uppercase mb-5">download resume</a>
+                </div>
+            </div>
+        </div>
 
     </section>
 

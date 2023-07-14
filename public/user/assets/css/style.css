@@ -208,3 +208,32 @@ body {
 
     }
 }
+
+.about-text a {
+    color: #f1fffa;
+    background: #2a9134;
+    border: 2px solid #2a9134;
+    transition: all 1s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-text a:hover {
+    color: #2a9134;
+    background: #f1fffa;
+    border-color: #f1fffa;
+    transform: translateY(-7px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+
+}
+
+.about-progress {
+    min-height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets/img/video-filler.jpeg)center/cover fixed no-repeat;
+    outline: 5px solid #2a9134;
+    outline-offset: 10px;
+}
+
+.progress-bar {
+    background: #2a9134;
+
+}
