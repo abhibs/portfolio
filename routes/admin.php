@@ -72,6 +72,8 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/program/know/create', [ProgramController::class, 'create'])->name('program-know-create');
         Route::post('/program/know/store', [ProgramController::class, 'store'])->name('program-know-store');
+        Route::get('/program/know', [ProgramController::class, 'index'])->name('program-know');
+        Route::post('/program/know/update/{id}', [ProgramController::class, 'update'])->name('program-know-update');
 
     });
 });
