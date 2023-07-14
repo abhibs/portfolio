@@ -23,7 +23,7 @@ class ResumeController extends Controller
 
         if ($request->hasfile('resume')) {
             $file = $request->file('resume');
-            $filename = hexdec(uniqid()) . '.' . $file->getClientOriginalName();
+            $filename = hexdec(uniqid()) . '.' . $file->getClientOriginalExtension();
             $filePath = 'storage/resume/' . $filename;
             $file->move(public_path('storage/resume'), $filePath);
             //dd($filename);
@@ -55,10 +55,10 @@ class ResumeController extends Controller
 
         if ($request->hasfile('resume')) {
             $file = $request->file('resume');
-            $filename =  hexdec(uniqid()) . '.' . $file->getClientOriginalName();
+            $filename =  hexdec(uniqid()) . '.' . $file->getClientOriginalExtension();
             $filePath = 'storage/resume/' . $filename;
             //delete previous image
-            @unlink(public_path('storage/resume/' . $resume->pdf));
+            @unlink(public_path('storage/resume/' . $resume->resume));
             $file->move(public_path('storage/resume'), $filePath);
             //dd($filename);
             $resume->resume = $filename;
