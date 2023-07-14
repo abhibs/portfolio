@@ -6,6 +6,8 @@ use App\Http\Controllers\Api\SocialMediaController;
 use App\Http\Controllers\Api\NameContentController;
 use App\Http\Controllers\Api\SliderController;
 use App\Http\Controllers\Api\SkillController;
+use App\Http\Controllers\Api\AboutVideoController;
+
 
 
 
@@ -28,6 +30,7 @@ Route::get('social/media', [SocialMediaController::class, 'socialMedia']);
 Route::get('name/content', [NameContentController::class, 'nameContent']);
 Route::get('slider', [SliderController::class, 'slider']);
 Route::get('skill', [SkillController::class, 'skill']);
+Route::get('about/video', [AboutVideoController::class, 'aboutVideo']);
 
 
 
