@@ -71,6 +71,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/resume/update/{id}', [ResumeController::class, 'update'])->name('resume-update');
 
         Route::get('/program/know/create', [ProgramController::class, 'create'])->name('program-know-create');
+        Route::post('/program/know/store', [ProgramController::class, 'store'])->name('program-know-store');
 
     });
 });

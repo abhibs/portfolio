@@ -28,7 +28,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="" enctype="multipart/form-data">
+                                <form method="post" action="{{ route('program-know-store') }}" enctype="multipart/form-data">
                                     @csrf
 
 
@@ -57,11 +57,11 @@
                                             <h6 class="mb-0">Program Know</h6>
                                         </div>
                                         <div class="col-sm-4 text-secondary">
-                                            <input type="text" name="" class="form-control" id=""
+                                            <input type="text" name="name[]" class="form-control" id=""
                                                 placeholder="Enter Program Name" />
                                         </div>
                                         <div class="col-sm-4 text-secondary">
-                                            <input type="text" name="" class="form-control" id=""
+                                            <input type="number" name="number[]" class="form-control" id=""
                                                 placeholder="Enter Program Know 1 to 100 " />
                                         </div>
                                         <div class="col-lg-2 form-group">
@@ -121,10 +121,10 @@
             return `<div class="dynamicRadio2"> <div class="row mb-3">       <div class="col-sm-2">
       </div>
       <div class="col-sm-4 text-secondary">
-         <input type="text" name="" class="form-control" id="" placeholder="Enter Program Name" />
+         <input type="text" name="name[]" class="form-control" id="" placeholder="Enter Program Name" />
       </div>
       <div class="col-sm-4 text-secondary">
-         <input type="text" name="" class="form-control" id="" placeholder="Enter Program Know 1 to 100 " />
+         <input type="number" name="number[]" class="form-control" id="" placeholder="Enter Program Know 1 to 100 " />
       </div>
         <div class="col-sm-2 form-group"><button style="border: none;" class="form-control text-danger removeGrossBtn2" id=""><i class="fa fa-minus"></i></button></div></div></div> `
         }
