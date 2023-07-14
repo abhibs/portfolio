@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\NameContentController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\AboutVideoController;
+use App\Http\Controllers\Admin\ResumeController;
 
 
 
@@ -65,6 +66,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/about/video/store', [AboutVideoController::class, 'store'])->name('about-video-store');
         Route::get('/about/video', [AboutVideoController::class, 'index'])->name('about-video');
         Route::post('/about/video/update', [AboutVideoController::class, 'update'])->name('about-video-update');
+
+
+        Route::get('/resume/create', [ResumeController::class, 'create'])->name('resume-create');
+        Route::post('/resume/store', [ResumeController::class, 'store'])->name('resume-store');
+        Route::get('/resume', [ResumeController::class, 'index'])->name('resume');
+        Route::post('/resume/update/{id}', [ResumeController::class, 'update'])->name('resume-update');
+
 
     });
 });

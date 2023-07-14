@@ -111,6 +111,22 @@
                             Create</a>
                     </li>
                 @endif
+
+
+                @php
+                    $data4 = App\Models\Resume::first();
+                @endphp
+                @if (isset($data4))
+                    <li>
+                        <a href="{{ route('resume') }}"><i class="bx bx-right-arrow-alt"></i>Resume
+                            Update</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('resume-create') }}"><i class="bx bx-right-arrow-alt"></i>Resume
+                            Create</a>
+                    </li>
+                @endif
             </ul>
         </li>
 
