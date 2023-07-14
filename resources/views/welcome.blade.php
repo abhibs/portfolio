@@ -244,7 +244,7 @@
                 </div>
                 <div class="col-md-6 py-5 about-text text-center">
                     <h2 class="text-uppercase">my resume</h2>
-                    <a href="#" class="btn btn-lg d-block w-75 mx-auto text-uppercase mb-5">download resume</a>
+                    <a href="{{ asset('storage/resume/' . $resume->resume) }}" target="_blank" class="btn btn-lg d-block w-75 mx-auto text-uppercase mb-5">download resume</a>
                 </div>
             </div>
         </div>
