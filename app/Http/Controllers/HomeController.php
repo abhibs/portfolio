@@ -7,6 +7,8 @@ use App\Models\SocialMedia;
 use App\Models\NameContent;
 use App\Models\Slider;
 use App\Models\Skill;
+use App\Models\AboutVideo;
+
 
 
 
@@ -17,7 +19,8 @@ class HomeController extends Controller
         $namecontent = NameContent::find(1);
         $sliders = Slider::where('status',1)->get();
         $skills = Skill::where('status',1)->limit(4)->get();
+        $aboutvideo = AboutVideo::find(1);
 
-        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills'));
+        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo'));
     }
 }

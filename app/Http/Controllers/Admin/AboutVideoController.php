@@ -94,7 +94,7 @@ class AboutVideoController extends Controller
                 'alert-type' => 'success'
             );
 
-            return redirect()->route('slider')->with($notification);
+            return redirect()->route('about-video')->with($notification);
 
         }
 
