@@ -9,6 +9,8 @@ use App\Http\Controllers\Api\SkillController;
 use App\Http\Controllers\Api\AboutVideoController;
 use App\Http\Controllers\Api\ResumeController;
 use App\Http\Controllers\Api\ProgramController;
+use App\Http\Controllers\Api\ProjectController;
+
 
 
 
@@ -36,6 +38,8 @@ Route::get('skill', [SkillController::class, 'skill']);
 Route::get('about/video', [AboutVideoController::class, 'aboutVideo']);
 Route::get('resume', [ResumeController::class, 'resume']);
 Route::get('program/know', [ProgramController::class, 'program']);
+Route::get('project', [ProjectController::class, 'projects']);
+
 
 
 
