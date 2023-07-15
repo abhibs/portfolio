@@ -270,9 +270,10 @@
             <div class="row height-30 align-items-center">
                 <div class="col-md-8 mx-auto text-center">
                     <h1 class="text-capitalize display-3">contact me</h1>
-                    <form class="form d-flex align-items-baseline">
-                        <input type="text" class="form-control form-control-lg m-2" id="name"
-                            placeholder="your email here....">
+                    <form class="form d-flex align-items-baseline" action="{{ route('contact-post') }}" method="POST">
+                        @csrf
+                        <input type="email" class="form-control form-control-lg m-2" id="name"
+                            placeholder="your email here...." name="email">
                         <button type="submit" class="btn btn-lg text-capitalize">Submit</button>
                     </form>
                 </div>
