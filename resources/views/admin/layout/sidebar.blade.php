@@ -167,6 +167,20 @@
             </a>
         </li>
 
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='lni lni-code'></i>
+                </div>
+                <div class="menu-title">Experiance</div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('experiance') }}"><i class="bx bx-right-arrow-alt"></i>All Experiance</a>
+                </li>
+                <li> <a href="{{ route('experiance-create') }}"><i class="bx bx-right-arrow-alt"></i>Add Experiance</a>
+                </li>
+            </ul>
+        </li>
+
 
 
 

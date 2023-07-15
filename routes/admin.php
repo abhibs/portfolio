@@ -11,8 +11,7 @@ use App\Http\Controllers\Admin\ResumeController;
 use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ContactController;
-
-
+use App\Http\Controllers\Admin\ExperianceController;
 
 Route::get('/test', function () {
     echo "Abhiram";
@@ -91,6 +90,16 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/contact', [ContactController::class, 'index'])->name('contact');
         Route::get('/contact/delete/{id}', [ContactController::class, 'delete'])->name('contact-delete');
+
+
+        Route::get('/experiance/create', [ExperianceController::class, 'create'])->name('experiance-create');
+        Route::post('/experiance/store', [ExperianceController::class, 'store'])->name('experiance-store');
+        Route::get('/experiance', [ExperianceController::class, 'index'])->name('experiance');
+        Route::get('/experiance/edit/{id}', [ExperianceController::class, 'edit'])->name('experiance-edit');
+        Route::post('/experiance/update', [ExperianceController::class, 'update'])->name('experiance-update');
+        Route::get('/experiance/delete/{id}', [ExperianceController::class, 'delete'])->name('experiance-delete');
+        Route::get('/experiance/inactive/{id}', [ExperianceController::class, 'inactive'])->name('experiance-inactive');
+        Route::get('/experiance/active/{id}', [ExperianceController::class, 'active'])->name('experiance-active');
 
     });
 });
