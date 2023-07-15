@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\SliderController;
 use App\Http\Controllers\Api\SkillController;
 use App\Http\Controllers\Api\AboutVideoController;
 use App\Http\Controllers\Api\ResumeController;
+use App\Http\Controllers\Api\ProgramController;
 
 
 
@@ -34,6 +35,8 @@ Route::get('slider', [SliderController::class, 'slider']);
 Route::get('skill', [SkillController::class, 'skill']);
 Route::get('about/video', [AboutVideoController::class, 'aboutVideo']);
 Route::get('resume', [ResumeController::class, 'resume']);
+Route::get('program/know', [ProgramController::class, 'program']);
+
 
 
 
