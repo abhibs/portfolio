@@ -26,7 +26,7 @@ $(document).ready(function() {
           {
             scrollTop: $(target).offset().top
           },
-          3000
+          100
         );
       $(".navbar-toggler").toggleClass("change");
       $("#myNavbar").collapse("hide");

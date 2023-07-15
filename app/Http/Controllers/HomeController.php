@@ -26,7 +26,7 @@ class HomeController extends Controller
         $skills = Skill::where('status',1)->get();
         $aboutvideo = AboutVideo::find(1);
         $resume = Resume::find(1);
-        $program = Program::find(2);
+        $program = Program::find(1);
         $projects = Project::where('status',1)->get();
         $experiances = Experiance::where('status',1)->get();
 

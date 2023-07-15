@@ -18,27 +18,27 @@
         <div class="row">
             <div class="col d-flex justify-content-between align-items-baseline">
                 <div class="top-icons">
-                    <a href="{{ $socialmedia->facebook }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->facebook }}" target="_blank" class="mx-2"><i
                             class="fab fa-facebook"></i></a>
-                    <a href="{{ $socialmedia->twitter }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->twitter }}" target="_blank" class="mx-2"><i
                             class="fab fa-twitter"></i></a>
-                    <a href="{{ $socialmedia->instagram }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->instagram }}" target="_blank" class="mx-2"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="{{ $socialmedia->linkedin }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->linkedin }}" target="_blank" class="mx-2"><i
                             class="fab fa-linkedin"></i></a>
-                    <a href="{{ $socialmedia->youtube }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->youtube }}" target="_blank" class="mx-2"><i
                             class="fab fa-youtube"></i></a>
-                    <a href="{{ $socialmedia->github }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->github }}" target="_blank" class="mx-2"><i
                             class="fab fa-github"></i></a>
                 </div>
-                <h5 class="text-capitalize">{{ $namecontent->content }}</h5>
+                <h5 class="text-capitalize">{{ @$namecontent->content }}</h5>
             </div>
         </div>
     </div>
 
     <header id="header">
         <nav id="navbar" class="navbar navbar-expand-lg">
-            <a class="navbar-brand px-2 py-0 " href="#">{{ $namecontent->name }}</a>
+            <a class="navbar-brand px-2 py-0 " href="#">{{ @$namecontent->name }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -57,14 +57,16 @@
                     <li class="nav-item">
                         <a class="nav-link m-2 text-capitalize" href="#about">about</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link m-2 text-capitalize" href="#projects">projects</a>
+                        <a class="nav-link m-2 text-capitalize" href="#posts">projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link m-2 text-capitalize" href="#reviews">experiance</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link m-2 text-capitalize" href="#posts">posts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link m-2 text-capitalize" href="#reviews">reviews</a>
+                        <a class="nav-link m-2 text-capitalize" href="#contact">enquiry</a>
                     </li>
                 </ul>
                 <form>
@@ -86,7 +88,7 @@
                     <div id="demo-slider" class="carousel slide" data-ride="carousel">
                         <!-- The slideshow -->
                         <div class="carousel-inner">
-                            @foreach ($sliders as $key => $item)
+                            @foreach (@$sliders as $key => $item)
                                 <div class="carousel-item {{ $key === 0 ? 'active' : '' }}"
                                     style="background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)), url( {{ $item->image }}) center/cover fixed no-repeat; min-height: 60vh;
                                 clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);">
@@ -138,7 +140,7 @@
             <!--      end of title-->
             <div class="row">
                 <!--item-->
-                @foreach ($skills as $item)
+                @foreach (@$skills as $item)
                     <div class="col-lg-6 my-5">
                         <div class="row">
                             <div class="col-6 d-flex align-items-center skills-icon">
@@ -165,7 +167,7 @@
         <!--video filler-->
         <article id="modal-filler" class="d-flex align-items-center justify-content-center"
             style="min-height: 50vh;
-        background: linear-gradient(rgba(42, 145, 52, 0.5), rgba(42, 145, 52, 0.5)), url({{ $aboutvideo->image }})center/cover fixed no-repeat;
+        background: linear-gradient(rgba(42, 145, 52, 0.5), rgba(42, 145, 52, 0.5)), url({{ @$aboutvideo->image }})center/cover fixed no-repeat;
     ">
             <!-- modal -->
             <a href="#"><i class="fas fa-play-circle" data-toggle="modal" data-target="#myModal"></i></a>
@@ -186,24 +188,25 @@
             <div class="row mb-5">
                 <div class="col-md-6 mb-5 d-flex flex-column justify-content-center"
                     style="    min-height: 50vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url({{ asset('storage/program/' . $program->image) }})center/cover fixed no-repeat;
+                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url({{ asset('storage/program/' . @$program->image) }})center/cover fixed no-repeat;
                 outline: 5px solid #2a9134;
                 outline-offset: 10px;">
                     <div class="progress-bars">
+                        @if ($program)
+                            @foreach ($program->multiprogram as $item)
+                                <div class="bar my-3">
+                                    <h5 class="text-light text-uppercase d-flex justify-content-between">
+                                        {{ $item->name }}<span>{{ $item->number }}%</span>
+                                    </h5>
+                                    <div class="progress bg-light">
 
-                        @foreach ($program->multiprogram as $item)
-                            <div class="bar my-3">
-                                <h5 class="text-light text-uppercase d-flex justify-content-between">
-                                    {{ $item->name }}<span>{{ $item->number }}%</span>
-                                </h5>
-                                <div class="progress bg-light">
-
-                                    <div class="progress-bar" role="progressbar"
-                                        style="width: {{ $item->number }}%;" aria-valuenow="{{ $item->number }}"
-                                        aria-valuemin="0" aria-valuemax="100">{{ $item->number }}%</div>
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: {{ $item->number }}%;" aria-valuenow="{{ $item->number }}"
+                                            aria-valuemin="0" aria-valuemax="100">{{ $item->number }}%</div>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
 
 
 
@@ -215,7 +218,7 @@
                 </div>
                 <div class="col-md-6 py-5 about-text text-center">
                     <h2 class="text-uppercase">my resume</h2>
-                    <a href="{{ asset('storage/resume/' . $resume->resume) }}" target="_blank"
+                    <a href="{{ asset('storage/resume/' . @$resume->resume) }}" target="_blank"
                         class="btn btn-lg d-block w-75 mx-auto text-uppercase mb-5">download resume</a>
                 </div>
             </div>
@@ -236,7 +239,7 @@
         </div>
         <div class="row">
 
-            @foreach ($projects as $item)
+            @foreach (@$projects as $item)
                 <div class="col-md-6 col-lg-4 my-3">
                     <div class="card">
                         <img src="{{ asset($item->image) }}" class="card-img-top" alt="coffe">
@@ -290,7 +293,7 @@
                 <div id="customer-slider" class="carousel slide" data-ride="carousel">
 
                     <div class="carousel-inner">
-                        @foreach ($experiances as $key => $item)
+                        @foreach (@$experiances as $key => $item)
                             <div class="carousel-item {{ $key === 0 ? 'active' : '' }} py-5">
                                 <div class="container text-center col-10 col-sm-8 mx-auto">
                                     <img src="{{ asset($item->image) }}" width="150px"
@@ -394,17 +397,17 @@
         <div class="row">
             <div class="col d-flex justify-content-between align-items-baseline">
                 <div class="footer-icons">
-                    <a href="{{ $socialmedia->facebook }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->facebook }}" target="_blank" class="mx-2"><i
                             class="fab fa-facebook"></i></a>
-                    <a href="{{ $socialmedia->twitter }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->twitter }}" target="_blank" class="mx-2"><i
                             class="fab fa-twitter"></i></a>
-                    <a href="{{ $socialmedia->instagram }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->instagram }}" target="_blank" class="mx-2"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="{{ $socialmedia->linkedin }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->linkedin }}" target="_blank" class="mx-2"><i
                             class="fab fa-linkedin"></i></a>
-                    <a href="{{ $socialmedia->youtube }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->youtube }}" target="_blank" class="mx-2"><i
                             class="fab fa-youtube"></i></a>
-                    <a href="{{ $socialmedia->github }}" target="_blank" class="mx-2"><i
+                    <a href="{{ @$socialmedia->github }}" target="_blank" class="mx-2"><i
                             class="fab fa-github"></i></a>
                 </div>
                 <h5 class="text-capitalize">
@@ -431,7 +434,7 @@
 
                 <div class="modal-body">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="{{ $aboutvideo->video }}"
+                        <iframe class="embed-responsive-item" src="{{ @$aboutvideo->video }}"
                             allowfullscreen></iframe>
                     </div>
                 </div>

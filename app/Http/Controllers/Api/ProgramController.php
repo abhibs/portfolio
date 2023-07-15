@@ -12,7 +12,7 @@ class ProgramController extends Controller
 {
     public function program()
     {
-        $program = Program::find(2);
+        $program = Program::find(1);
         $program->image = asset("/storage/program/$program->image");
         $multiprogram = MultiProgram::where('program_id', $program->id)->get();
 

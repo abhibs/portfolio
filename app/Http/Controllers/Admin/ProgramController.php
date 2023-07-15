@@ -50,7 +50,7 @@ class ProgramController extends Controller
 
     public function index()
     {
-        $program = Program::find(2);
+        $program = Program::find(1);
         $multiprogram = MultiProgram::where('program_id', $program->id)->get();
         return view('admin.program.index', compact('program', 'multiprogram'));
     }
