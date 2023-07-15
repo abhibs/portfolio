@@ -10,6 +10,8 @@ use App\Http\Controllers\Api\AboutVideoController;
 use App\Http\Controllers\Api\ResumeController;
 use App\Http\Controllers\Api\ProgramController;
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\ContactController;
+
 
 
 
@@ -39,6 +41,8 @@ Route::get('about/video', [AboutVideoController::class, 'aboutVideo']);
 Route::get('resume', [ResumeController::class, 'resume']);
 Route::get('program/know', [ProgramController::class, 'program']);
 Route::get('project', [ProjectController::class, 'projects']);
+Route::post('contact', [ContactController::class, 'contact']);
+
 
 
 
