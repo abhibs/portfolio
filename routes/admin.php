@@ -12,6 +12,10 @@ use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ExperianceController;
+use App\Http\Controllers\Admin\EnquiryController;
+
+
+
 
 Route::get('/test', function () {
     echo "Abhiram";
@@ -100,6 +104,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/experiance/delete/{id}', [ExperianceController::class, 'delete'])->name('experiance-delete');
         Route::get('/experiance/inactive/{id}', [ExperianceController::class, 'inactive'])->name('experiance-inactive');
         Route::get('/experiance/active/{id}', [ExperianceController::class, 'active'])->name('experiance-active');
+
+
+        Route::get('/enquiry', [EnquiryController::class, 'index'])->name('enquiry');
+        Route::get('/enquiry/delete/{id}', [EnquiryController::class, 'delete'])->name('enquiry-delete');
 
     });
 });

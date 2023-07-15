@@ -181,6 +181,14 @@
             </ul>
         </li>
 
+        <li>
+            <a href="{{ route('enquiry') }}">
+                <div class="parent-icon"><i class='lni lni-phone'></i>
+                </div>
+                <div class="menu-title">Enquiry List</div>
+            </a>
+        </li>
+
 
 
 
