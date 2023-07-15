@@ -145,6 +145,20 @@
             </ul>
         </li>
 
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='lni lni-code'></i>
+                </div>
+                <div class="menu-title">Project</div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('project') }}"><i class="bx bx-right-arrow-alt"></i>All Project</a>
+                </li>
+                <li> <a href="{{ route('project-create') }}"><i class="bx bx-right-arrow-alt"></i>Add Project</a>
+                </li>
+            </ul>
+        </li>
+
 
 
 

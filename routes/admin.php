@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\AboutVideoController;
 use App\Http\Controllers\Admin\ResumeController;
 use App\Http\Controllers\Admin\ProgramController;
+use App\Http\Controllers\Admin\ProjectController;
 
 
 Route::get('/test', function () {
@@ -74,6 +75,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/program/know/store', [ProgramController::class, 'store'])->name('program-know-store');
         Route::get('/program/know', [ProgramController::class, 'index'])->name('program-know');
         Route::post('/program/know/update/{id}', [ProgramController::class, 'update'])->name('program-know-update');
+
+
+        Route::get('/project/create', [ProjectController::class, 'create'])->name('project-create');
+        Route::post('/project/store', [ProjectController::class, 'store'])->name('project-store');
+        Route::get('/project', [ProjectController::class, 'index'])->name('project');
+        Route::get('/project/edit/{id}', [ProjectController::class, 'edit'])->name('project-edit');
+        Route::post('/project/update', [ProjectController::class, 'update'])->name('project-update');
+        Route::get('/project/delete/{id}', [ProjectController::class, 'delete'])->name('project-delete');
+        Route::get('/project/inactive/{id}', [ProjectController::class, 'inactive'])->name('project-inactive');
+        Route::get('/project/active/{id}', [ProjectController::class, 'active'])->name('project-active');
 
     });
 });
