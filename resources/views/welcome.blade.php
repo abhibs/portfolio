@@ -128,11 +128,11 @@
             <div class="row title mb-5">
                 <div class="col text-center">
                     <h1 class="text-uppercase">my skills</h1>
-                    <h3 class="text-capitalize">Lorem ipsum dolor sit amet.</h3>
+                    {{-- <h3 class="text-capitalize">Lorem ipsum dolor sit amet.</h3>
                     <a href="#" class="mb-0">
                         <p>All Skill</p>
                     </a>
-                    <div class="title-underline"></div>
+                    <div class="title-underline"></div> --}}
 
                 </div>
 
