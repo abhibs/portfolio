@@ -290,78 +290,34 @@
                 <div id="customer-slider" class="carousel slide" data-ride="carousel">
 
                     <div class="carousel-inner">
-                        <div class="carousel-item active py-5">
-                            <div class="container text-center col-10 col-sm-8 mx-auto">
-                                <img src="img/banner-1.jpeg" width="150px" class="img-fluid rounded-circle"
-                                    alt="">
-                                <div class="customer-text">
-                                    <h3 class="text-capitalize my-2">customer name</h3>
-                                    <h4 class="text-capitalize">company</h4>
-                                    <p class="lead"><span><i class="fas fa-quote-left mr-2"></i></span>Lorem ipsum
-                                        dolor
-                                        sit amet, consectetur adipisicing elit. Quis dignissimos ducimus deserunt dicta
-                                        eaque, neque, et harum ut consequuntur impedit.</p>
-                                    <div class="ratings">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                        @foreach ($experiances as $key => $item)
+                            <div class="carousel-item {{ $key === 0 ? 'active' : '' }} py-5">
+                                <div class="container text-center col-10 col-sm-8 mx-auto">
+                                    <img src="{{ asset($item->image) }}" width="150px"
+                                        class="img-fluid rounded-circle" alt="">
+                                    <div class="customer-text">
+                                        <h3 class="text-capitalize my-2">{{ $item->name }}</h3>
+                                        <h4 class="text-capitalize">{{ $item->company_name }}</h4>
+                                        <p class="lead"><span><i
+                                                    class="fas fa-quote-left mr-2"></i></span>{{ $item->content }}<span><i
+                                                    class="fas fa-quote-right mr-2"></i></span></p>
+                                        <div class="ratings">
+                                            @for ($i = 0; $i < 5; $i++)
+                                                @if ($i < $item->rating)
+                                                    <i class="fas fa-star"></i>
+                                                @endif
+                                            @endfor
+
+                                        </div>
                                     </div>
+
                                 </div>
 
-                            </div>
-
-
-                        </div>
-                        <div class="carousel-item  py-5">
-                            <div class="container text-center col-10 col-sm-8 mx-auto">
-                                <img src="img/banner-1.jpeg" width="150px" class="img-fluid rounded-circle"
-                                    alt="">
-                                <div class="customer-text">
-                                    <h3 class="text-capitalize my-2">customer name</h3>
-                                    <h4 class="text-capitalize">company</h4>
-                                    <p class="lead"><span><i class="fas fa-quote-left mr-2"></i></span>Lorem ipsum
-                                        dolor
-                                        sit amet, consectetur adipisicing elit. Quis dignissimos ducimus deserunt dicta
-                                        eaque, neque, et harum ut consequuntur impedit.</p>
-                                    <div class="ratings">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
 
                             </div>
+                        @endforeach
 
 
-                        </div>
-                        <div class="carousel-item py-5">
-                            <div class="container text-center col-10 col-sm-8 mx-auto">
-                                <img src="img/banner-1.jpeg" width="150px" class="img-fluid rounded-circle"
-                                    alt="">
-                                <div class="customer-text">
-                                    <h3 class="text-capitalize my-2">customer name</h3>
-                                    <h4 class="text-capitalize">company</h4>
-                                    <p class="lead"><span><i class="fas fa-quote-left mr-2"></i></span>Lorem ipsum
-                                        dolor
-                                        sit amet, consectetur adipisicing elit. Quis dignissimos ducimus deserunt dicta
-                                        eaque, neque, et harum ut consequuntur impedit.</p>
-                                    <div class="ratings">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#customer-slider" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>

@@ -12,6 +12,7 @@ use App\Models\Resume;
 use App\Models\Program;
 use App\Models\Project;
 use App\Models\Contact;
+use App\Models\Experiance;
 use Mail;
 
 class HomeController extends Controller
@@ -25,8 +26,10 @@ class HomeController extends Controller
         $resume = Resume::find(1);
         $program = Program::find(2);
         $projects = Project::where('status',1)->get();
+        $experiances = Experiance::where('status',1)->get();
 
-        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo', 'resume', 'program', 'projects'));
+
+        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo', 'resume', 'program', 'projects', 'experiances'));
     }
 
 
