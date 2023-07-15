@@ -314,3 +314,25 @@ body {
     border-color: #2a9134;
     color: #2a9134;
 }
+
+
+.customer-text h3 {
+    color: #242424;
+}
+
+.customer-text h4 {
+    color: #5a5a5a;
+}
+
+.customer-text p {
+    line-height: 1.5
+}
+
+.customer-text span {
+    font-size: 40px;
+    color: #cbcb00;
+}
+
+.ratings {
+    color: #cbcb00;
+}

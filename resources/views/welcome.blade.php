@@ -265,12 +265,13 @@
 
     <section id="contact-form" class='py-5'
         style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(user/assets/img/banner-2.jpeg)center/cover fixed no-repeat;
-    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%)">
+    clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%)">
         <div class="container py-5">
             <div class="row height-30 align-items-center">
                 <div class="col-md-8 mx-auto text-center">
                     <h1 class="text-capitalize display-3">contact me</h1>
-                    <form class="form d-flex align-items-baseline" action="{{ route('contact-post') }}" method="POST">
+                    <form class="form d-flex align-items-baseline" action="{{ route('contact-post') }}"
+                        method="POST">
                         @csrf
                         <input type="email" class="form-control form-control-lg m-2" id="name"
                             placeholder="your email here...." name="email">
@@ -280,6 +281,106 @@
             </div>
         </div>
     </section>
+
+    <section id="reviews"
+        style="background: linear-gradient(rgba(42, 145, 52, 0.7), rgba(42, 145, 52, 0.7)), url(./user/assets/img/banner-1.jpeg);
+    color: #f1fffa;">
+        <div class="row">
+            <div class="col py-5">
+                <div id="customer-slider" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active py-5">
+                            <div class="container text-center col-10 col-sm-8 mx-auto">
+                                <img src="img/banner-1.jpeg" width="150px" class="img-fluid rounded-circle"
+                                    alt="">
+                                <div class="customer-text">
+                                    <h3 class="text-capitalize my-2">customer name</h3>
+                                    <h4 class="text-capitalize">company</h4>
+                                    <p class="lead"><span><i class="fas fa-quote-left mr-2"></i></span>Lorem ipsum
+                                        dolor
+                                        sit amet, consectetur adipisicing elit. Quis dignissimos ducimus deserunt dicta
+                                        eaque, neque, et harum ut consequuntur impedit.</p>
+                                    <div class="ratings">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="carousel-item  py-5">
+                            <div class="container text-center col-10 col-sm-8 mx-auto">
+                                <img src="img/banner-1.jpeg" width="150px" class="img-fluid rounded-circle"
+                                    alt="">
+                                <div class="customer-text">
+                                    <h3 class="text-capitalize my-2">customer name</h3>
+                                    <h4 class="text-capitalize">company</h4>
+                                    <p class="lead"><span><i class="fas fa-quote-left mr-2"></i></span>Lorem ipsum
+                                        dolor
+                                        sit amet, consectetur adipisicing elit. Quis dignissimos ducimus deserunt dicta
+                                        eaque, neque, et harum ut consequuntur impedit.</p>
+                                    <div class="ratings">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="carousel-item py-5">
+                            <div class="container text-center col-10 col-sm-8 mx-auto">
+                                <img src="img/banner-1.jpeg" width="150px" class="img-fluid rounded-circle"
+                                    alt="">
+                                <div class="customer-text">
+                                    <h3 class="text-capitalize my-2">customer name</h3>
+                                    <h4 class="text-capitalize">company</h4>
+                                    <p class="lead"><span><i class="fas fa-quote-left mr-2"></i></span>Lorem ipsum
+                                        dolor
+                                        sit amet, consectetur adipisicing elit. Quis dignissimos ducimus deserunt dicta
+                                        eaque, neque, et harum ut consequuntur impedit.</p>
+                                    <div class="ratings">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#customer-slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#customer-slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
