@@ -18,7 +18,7 @@ class HomeController extends Controller
         $socialmedia = SocialMedia::find(1);
         $namecontent = NameContent::find(1);
         $sliders = Slider::where('status',1)->get();
-        $skills = Skill::where('status',1)->limit(4)->get();
+        $skills = Skill::where('status',1)->get();
         $aboutvideo = AboutVideo::find(1);
         $resume = Resume::find(1);
         $program = Program::find(2);

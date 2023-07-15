@@ -277,3 +277,40 @@ body {
 #posts .card:hover .corner-text {
     opacity: 1;
 }
+
+
+.height-30 {
+    min-height: 30vh;
+}
+
+#contact-form h1 {
+    color: #2a9134;
+}
+
+#contact-form .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #f1fffa;
+    border-radius: 0;
+    color: #f1fffa;
+}
+
+.form-control::placeholder {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #f1fffa;
+}
+
+#contact-form button {
+    background: transparent;
+    border: 2px solid #f1fffa;
+    color: #f1fffa;
+    border-radius: 0;
+    transition: all 2s ease;
+}
+
+#contact-form button:hover {
+    background: #f1fffa;
+    border-color: #2a9134;
+    color: #2a9134;
+}

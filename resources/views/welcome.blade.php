@@ -244,7 +244,8 @@
                         <h1 class="my-2 text-capitalize">{{ $item->name }}</h1>
                         <hr class="mb-0">
                         <div class="card-footer d-flex justify-content-between px-0">
-                            <a href="{{ $item->url }}" class="text-capitalize post-link h4" target="_blank">read more...</a>
+                            <a href="{{ $item->url }}" class="text-capitalize post-link h4" target="_blank">read
+                                more...</a>
                             <h4>{{ $item->date }}</h4>
                         </div>
                     </div>
@@ -260,6 +261,23 @@
 
         </div>
 
+    </section>
+
+    <section id="contact-form" class='py-5'
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(user/assets/img/banner-2.jpeg)center/cover fixed no-repeat;
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%)">
+        <div class="container py-5">
+            <div class="row height-30 align-items-center">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="text-capitalize display-3">contact me</h1>
+                    <form class="form d-flex align-items-baseline">
+                        <input type="text" class="form-control form-control-lg m-2" id="name"
+                            placeholder="your email here....">
+                        <button type="submit" class="btn btn-lg text-capitalize">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
 
