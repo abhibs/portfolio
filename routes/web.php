@@ -16,5 +16,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 Route::post('contact', [HomeController::class, 'contactPost'])->name('contact-post');
+Route::post('enquiry', [HomeController::class, 'enquiryPost'])->name('enquiry-post');
+
 
 

@@ -50,7 +50,7 @@
                                     <td style="padding:0 15px; text-align:center;">
                                         <h1
                                             style="color:#1e1e2d; font-weight:400; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">
-                                            Contact Form
+                                            Enquiry Form
                                         </h1>
                                         <span
                                             style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece;
@@ -67,6 +67,22 @@
 
 
 
+                                                <tr>
+                                                    <td
+                                                        style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                                        Name:</td>
+                                                    <td
+                                                        style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                                        {{ $name }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                                        Phone:</td>
+                                                    <td
+                                                        style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                                        {{ $phone }}</td>
+                                                </tr>
                                                 <tr>
                                                     <td
                                                         style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">

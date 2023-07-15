@@ -346,14 +346,15 @@
                             <h1 class="text-uppercase">Enquiry form</h1>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form action="{{ route('enquiry-post') }}" method="POST">
+                                @csrf
                                 <div class="input-group my-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="input-text"><i
                                                 class="fas fa-user"></i></span>
                                     </div>
                                     <input type="text" class="form-control form-control-lg text-capitalize"
-                                        placeholder="Enter your email here">
+                                        placeholder="Enter your name here" name="name">
                                 </div>
                                 <div class="input-group my-3">
                                     <div class="input-group-prepend">
@@ -361,7 +362,7 @@
                                                 class="fas fa-phone"></i></span>
                                     </div>
                                     <input type="number" class="form-control form-control-lg text-capitalize"
-                                        placeholder="Enter your phone number here">
+                                        placeholder="Enter your phone number here" name="phone">
                                 </div>
 
 
@@ -372,17 +373,10 @@
                                                 class="fas fa-envelope"></i></span>
                                     </div>
                                     <input type="email" class="form-control form-control-lg text-capitalize"
-                                        placeholder="Enter your email here">
+                                        placeholder="Enter your email here" name="email">
                                 </div>
 
-                                <div class="input-group my-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="input-username"><i
-                                                class="fas fa-users"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control form-control-lg text-capitalize"
-                                        placeholder="Enter your username here">
-                                </div>
+
 
                                 <button type="submit" class="btn btn-block btn-lg text-uppercase contact-btn"><i
                                         class="far fa-hand-point-right mr-2"></i>click here</button>
