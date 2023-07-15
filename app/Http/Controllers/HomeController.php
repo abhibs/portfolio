@@ -9,6 +9,8 @@ use App\Models\Slider;
 use App\Models\Skill;
 use App\Models\AboutVideo;
 use App\Models\Resume;
+use App\Models\Program;
+
 
 
 
@@ -23,7 +25,9 @@ class HomeController extends Controller
         $skills = Skill::where('status',1)->limit(4)->get();
         $aboutvideo = AboutVideo::find(1);
         $resume = Resume::find(1);
+        $program = Program::find(2);
 
-        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo', 'resume'));
+
+        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo', 'resume', 'program'));
     }
 }
