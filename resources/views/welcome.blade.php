@@ -236,95 +236,23 @@
         </div>
         <div class="row">
 
-            <!--     post-->
-            <div class="col-md-6 col-lg-4 my-3">
-                <div class="card">
-                    <img src="./user/assets/img/projects-coffee-1.jpeg" class="card-img-top" alt="coffe">
-                    <h6 class="corner-text mb-0 px-3">New</h6>
-                    <h1 class="my-2 text-capitalize">post name</h1>
-                    <hr class="mb-0">
-                    <div class="card-footer d-flex justify-content-between px-0">
-                        <a href="#" class="text-capitalize post-link h4">read more...</a>
-                        <h4>02/22/2018</h4>
+            @foreach ($projects as $item)
+                <div class="col-md-6 col-lg-4 my-3">
+                    <div class="card">
+                        <img src="{{ asset($item->image) }}" class="card-img-top" alt="coffe">
+                        <h6 class="corner-text mb-0 px-3">{{ $item->name }}</h6>
+                        <h1 class="my-2 text-capitalize">{{ $item->name }}</h1>
+                        <hr class="mb-0">
+                        <div class="card-footer d-flex justify-content-between px-0">
+                            <a href="{{ $item->url }}" class="text-capitalize post-link h4" target="_blank">read more...</a>
+                            <h4>{{ $item->date }}</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--end of post-->
-            <!--     post-->
-            <div class="col-md-6 col-lg-4 my-3">
-                <div class="card">
-                    <img src="./user/assets/img/projects-water-1.jpeg" class="card-img-top" alt="coffe">
-                    <h6 class="corner-text mb-0 px-3">New</h6>
-                    <h1 class="my-2 text-capitalize">post name</h1>
+            @endforeach
 
-                    <hr class="mb-0">
-                    <div class="card-footer d-flex justify-content-between px-0">
-                        <a href="#" class="text-capitalize post-link h4">read more...</a>
-                        <h4>02/22/2018</h4>
-                    </div>
-                </div>
-            </div>
-            <!--end of post-->
-            <!--     post-->
-            <div class="col-md-6 col-lg-4 my-3 mx-auto">
-                <div class="card">
-                    <img src="./user/assets/img/projects-tea-1.jpeg" class="card-img-top" alt="coffe">
-                    <h6 class="corner-text mb-0 px-3">New</h6>
-                    <h1 class="my-2 text-capitalize">post name</h1>
 
-                    <hr class="mb-0">
-                    <div class="card-footer d-flex justify-content-between px-0">
-                        <a href="#" class="text-capitalize post-link h4">read more...</a>
-                        <h4>02/22/2018</h4>
-                    </div>
-                </div>
-            </div>
-            <!--end of post-->
 
-            <div class="col-md-6 col-lg-4 my-3">
-                <div class="card">
-                    <img src="./user/assets/img/projects-coffee-1.jpeg" class="card-img-top" alt="coffe">
-                    <h6 class="corner-text mb-0 px-3">New</h6>
-                    <h1 class="my-2 text-capitalize">post name</h1>
-
-                    <hr class="mb-0">
-                    <div class="card-footer d-flex justify-content-between px-0">
-                        <a href="#" class="text-capitalize post-link h4">read more...</a>
-                        <h4>02/22/2018</h4>
-                    </div>
-                </div>
-            </div>
-            <!--end of post-->
-            <!--     post-->
-            <div class="col-md-6 col-lg-4 my-3">
-                <div class="card">
-                    <img src="./user/assets/img/projects-water-1.jpeg" class="card-img-top" alt="coffe">
-                    <h6 class="corner-text mb-0 px-3">New</h6>
-                    <h1 class="my-2 text-capitalize">post name</h1>
-
-                    <hr class="mb-0">
-                    <div class="card-footer d-flex justify-content-between px-0">
-                        <a href="#" class="text-capitalize post-link h4">read more...</a>
-                        <h4>02/22/2018</h4>
-                    </div>
-                </div>
-            </div>
-            <!--end of post-->
-            <!--     post-->
-            <div class="col-md-6 col-lg-4 my-3 mx-auto">
-                <div class="card">
-                    <img src="./user/assets/img/projects-tea-1.jpeg" class="card-img-top" alt="coffe">
-                    <h6 class="corner-text mb-0 px-3">New</h6>
-                    <h1 class="my-2 text-capitalize">post name</h1>
-
-                    <hr class="mb-0">
-                    <div class="card-footer d-flex justify-content-between px-0">
-                        <a href="#" class="text-capitalize post-link h4">read more...</a>
-                        <h4>02/22/2018</h4>
-                    </div>
-                </div>
-            </div>
-            <!--end of post-->
 
 
 

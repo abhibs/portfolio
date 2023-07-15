@@ -10,11 +10,7 @@ use App\Models\Skill;
 use App\Models\AboutVideo;
 use App\Models\Resume;
 use App\Models\Program;
-
-
-
-
-
+use App\Models\Project;
 
 class HomeController extends Controller
 {
@@ -26,8 +22,8 @@ class HomeController extends Controller
         $aboutvideo = AboutVideo::find(1);
         $resume = Resume::find(1);
         $program = Program::find(2);
+        $projects = Project::where('status',1)->get();
 
-
-        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo', 'resume', 'program'));
+        return view('welcome',compact('socialmedia', 'namecontent', 'sliders', 'skills', 'aboutvideo', 'resume', 'program', 'projects'));
     }
 }
