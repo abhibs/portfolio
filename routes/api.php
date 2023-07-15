@@ -12,6 +12,8 @@ use App\Http\Controllers\Api\ProgramController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ExperiaceController;
+use App\Http\Controllers\Api\EnquiryController;
+
 
 
 
@@ -45,6 +47,7 @@ Route::get('program/know', [ProgramController::class, 'program']);
 Route::get('project', [ProjectController::class, 'projects']);
 Route::post('contact', [ContactController::class, 'contact']);
 Route::get('experiance', [ExperiaceController::class, 'experiance']);
+Route::post('enquiry', [EnquiryController::class, 'enquiry']);
 
 
 
