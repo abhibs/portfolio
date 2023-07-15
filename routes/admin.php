@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\AboutVideoController;
 use App\Http\Controllers\Admin\ResumeController;
 use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\ContactController;
+
 
 
 Route::get('/test', function () {
@@ -85,6 +87,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/project/delete/{id}', [ProjectController::class, 'delete'])->name('project-delete');
         Route::get('/project/inactive/{id}', [ProjectController::class, 'inactive'])->name('project-inactive');
         Route::get('/project/active/{id}', [ProjectController::class, 'active'])->name('project-active');
+
+
+        Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+        Route::get('/contact/delete/{id}', [ContactController::class, 'delete'])->name('contact-delete');
 
     });
 });

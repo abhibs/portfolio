@@ -159,6 +159,14 @@
             </ul>
         </li>
 
+        <li>
+            <a href="{{ route('contact') }}">
+                <div class="parent-icon"><i class='lni lni-phone'></i>
+                </div>
+                <div class="menu-title">Contact List</div>
+            </a>
+        </li>
+
 
 
 
