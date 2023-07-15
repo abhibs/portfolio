@@ -336,3 +336,44 @@ body {
 .ratings {
     color: #cbcb00;
 }
+
+
+
+#contact .card {
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 2s ease;
+}
+
+#contact .card:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .card-header {
+    color: #2a9134;
+}
+
+#contact .input-group-text {
+    background: #2a9134;
+    border-color: #2a9134;
+    color: #242424
+}
+
+#contact .card input {
+    color: #606060;
+}
+
+#contact .card input::placeholder {
+    color: #606060;
+}
+
+.contact-btn {
+    color: #f1fffa;
+    background: #2a9134;
+    transition: all 2s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: transparent;
+    border-color: #2a9134;
+    color: #2a9134;
+}

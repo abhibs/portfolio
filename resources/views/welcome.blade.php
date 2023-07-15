@@ -336,6 +336,66 @@
         </div>
     </section>
 
+    <section id="contact" class="py-5"
+        style="background:url(./user/assets/img/banner-1.jpeg)center/cover fixed no-repeat;">
+        <div class="container">
+            <div class="row align-items-baseline" style="min-height: 80vh;">
+                <div class="col-lg-6 col-sm-10 mx-auto my-3 ">
+                    <div class="card text-center">
+                        <div class="card-header text-centertext-uppercase">
+                            <h1 class="text-uppercase">Enquiry form</h1>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="input-group my-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="input-text"><i
+                                                class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control form-control-lg text-capitalize"
+                                        placeholder="Enter your email here">
+                                </div>
+                                <div class="input-group my-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="input-phone"><i
+                                                class="fas fa-phone"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control form-control-lg text-capitalize"
+                                        placeholder="Enter your phone number here">
+                                </div>
+
+
+
+                                <div class="input-group my-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="input-email"><i
+                                                class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control form-control-lg text-capitalize"
+                                        placeholder="Enter your email here">
+                                </div>
+
+                                <div class="input-group my-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="input-username"><i
+                                                class="fas fa-users"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control form-control-lg text-capitalize"
+                                        placeholder="Enter your username here">
+                                </div>
+
+                                <button type="submit" class="btn btn-block btn-lg text-uppercase contact-btn"><i
+                                        class="far fa-hand-point-right mr-2"></i>click here</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
 
 
 
