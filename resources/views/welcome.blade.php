@@ -390,6 +390,24 @@
         </div>
     </section>
 
+    <footer class="container-fluid py-2 px-3">
+        <div class="row">
+            <div class="col d-flex justify-content-between align-items-baseline">
+                <div class="footer-icons">
+                    <a href="#" class="mx-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-github"></i></a>
+                </div>
+                <h5 class="text-capitalize">
+                    2023 &copy; copyright : Abhiram
+                </h5>
+            </div>
+        </div>
+    </footer>
+
 
 
 
