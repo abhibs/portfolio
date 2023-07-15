@@ -237,3 +237,43 @@ body {
     background: #2a9134;
 
 }
+
+
+#posts .card {
+    background: transparent !important;
+    border: none;
+    position: relative;
+}
+
+#posts .card-img-top {
+    border-radius: 0 !important;
+}
+
+#posts .card-footer {
+    background: transparent;
+
+}
+
+.post-link {
+    color: #2a9134;
+    transition: all 1s ease-in-out;
+}
+
+.post-link:hover {
+    color: #dd0000;
+    text-decoration: none;
+
+}
+
+.corner-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #dd0000;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+#posts .card:hover .corner-text {
+    opacity: 1;
+}
