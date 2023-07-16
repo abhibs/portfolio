@@ -95,7 +95,7 @@
                                     <div class="carousel-caption mb-5 text-right">
                                         <h1 class="display-3 text-capitalize mb-2 text-center">{{ $item->name }}</h1>
                                         <a href="{{ $item->url }}"
-                                            class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
+                                           target="_blank" class="btn btn-lg mb-5 text-uppercase banner-btn">my work</a>
                                     </div>
                                 </div>
                             @endforeach

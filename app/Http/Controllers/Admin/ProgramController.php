@@ -45,7 +45,7 @@ class ProgramController extends Controller
             'alert-type' => 'success'
         );
 
-        return redirect()->back()->with($notification);
+        return redirect()->route('program-know')->with($notification);
     }
 
     public function index()
