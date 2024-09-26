@@ -14,6 +14,7 @@ class ContactController extends Controller
         // dd($request->all());
         $request->validate([
             'email' => 'required',
+            'name' => 'required',
         ]);
 
         $contact = new Contact;
